@@ -45,21 +45,21 @@ export default function SignUp() {
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
           type='text'
-          placeholder='Nhập tên người dùng...'
+          placeholder='Tên người dùng...'
           className='border p-3 rounded-lg'
           id='username'
           onChange={handleChange}
         />
         <input
           type='email'
-          placeholder='Nhập email...'
+          placeholder='Email...'
           className='border p-3 rounded-lg'
           id='email'
           onChange={handleChange}
         />
         <input
           type='password'
-          placeholder='Nhập mật khẩu...'
+          placeholder='Mật khẩu...'
           className='border p-3 rounded-lg'
           id='password'
           onChange={handleChange}

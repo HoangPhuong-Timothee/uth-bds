@@ -21,7 +21,7 @@ export default function CreateListing() {
     type: 'rent',
     bedrooms: 1,
     bathrooms: 1,
-    regularPrice: 50,
+    regularPrice: 1000000,
     discountPrice: 0,
     offer: false,
     parking: false,
@@ -127,9 +127,9 @@ export default function CreateListing() {
     e.preventDefault();
     try {
       if (formData.imageUrls.length < 1)
-        return setError('You must upload at least one image');
+        return setError('Cần đăng ít nhất 1 ảnh!');
       if (+formData.regularPrice < +formData.discountPrice)
-        return setError('Discount price must be lower than regular price');
+        return setError('Giá giảm phải nhỏ hơn giá bán!');
       setLoading(true);
       setError(false);
       const res = await fetch('/api/listing/create', {
@@ -162,7 +162,7 @@ export default function CreateListing() {
         <div className='flex flex-col gap-4 flex-1'>
           <input
             type='text'
-            placeholder='Nhập tên bất động sản...'
+            placeholder='Tên bất động sản...'
             className='border p-3 rounded-lg'
             id='name'
             maxLength='62'
@@ -173,7 +173,7 @@ export default function CreateListing() {
           />
           <textarea
             type='text'
-            placeholder='Nhập mô tả...'
+            placeholder='Mô tả...'
             className='border p-3 rounded-lg'
             id='description'
             required
@@ -182,7 +182,7 @@ export default function CreateListing() {
           />
           <input
             type='text'
-            placeholder='Nhập địa chỉ...'
+            placeholder='Địa chỉ...'
             className='border p-3 rounded-lg'
             id='address'
             required
@@ -238,7 +238,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.offer}
               />
-              <span>Trả giá</span>
+              <span>Thương lượng</span>
             </div>
           </div>
           <div className='flex flex-wrap gap-6'>
