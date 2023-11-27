@@ -180,7 +180,7 @@ export default function Profile() {
           ) : uploadProgress > 0 && uploadProgress < 100 ? (
             <span className='text-slate-700'>{`Đang tải ${uploadProgress}%`}</span>
           ) : uploadProgress === 100 ? (
-            <span className='text-green-700'>Cập nhật ảnh đại diện thành công!</span>
+            <span className='text-green-700'>Thêm ảnh đại diện thành công!</span>
           ) : (
             ''
           )}

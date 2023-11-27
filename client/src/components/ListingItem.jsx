@@ -1,5 +1,13 @@
 import { Link } from 'react-router-dom';
 import { MdLocationOn } from 'react-icons/md';
+import {
+  FaBath,
+  FaBed,
+  FaChair,
+  FaMapMarkerAlt,
+  FaParking,
+  FaShare,
+} from "react-icons/fa";
 
 export default function ListingItem({ listing }) {
   return (
@@ -30,13 +38,15 @@ export default function ListingItem({ listing }) {
             {listing.offer
               ? listing.discountPrice.toLocaleString('en-US')
               : listing.regularPrice.toLocaleString('en-US')}
-            {listing.type === 'rent' && ' VND / tháng'} 
+            {listing.type === 'rent' ? ' VND / tháng' : ' VND'} 
           </p>
           <div className='text-slate-700 flex gap-4'>
-            <div className='font-bold text-xs'>
+            <div className='font-bold text-xs flex items-center gap-1 whitespace-nowrap'>
+              <FaBed className="text-lg" />
               {listing.bedrooms} giường ngủ
             </div>
-            <div className='font-bold text-xs'>
+            <div className='font-bold text-xs flex items-center gap-1 whitespace-nowrap'>
+              <FaBath className="text-lg" />
               {listing.bathrooms > 1
                 ? `${listing.bathrooms} toilets `
                 : `${listing.bathrooms} toilet `}

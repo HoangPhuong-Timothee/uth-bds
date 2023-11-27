@@ -20,8 +20,8 @@ export default function CreateListing() {
     description: '',
     address: '',
     type: 'rent',
-    bedrooms: 1,
-    bathrooms: 1,
+    bedrooms: 0,
+    bathrooms: 0,
     regularPrice: 1000000,
     discountPrice: 0,
     offer: false,
@@ -262,7 +262,7 @@ export default function CreateListing() {
               <input
                 type='number'
                 id='bedrooms'
-                min='1'
+                min='0'
                 max='10'
                 required
                 className='p-3 border border-gray-300 rounded-lg'
@@ -275,7 +275,7 @@ export default function CreateListing() {
               <input
                 type='number'
                 id='bathrooms'
-                min='1'
+                min='0'
                 max='10'
                 required
                 className='p-3 border border-gray-300 rounded-lg'

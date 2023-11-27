@@ -239,7 +239,7 @@ export default function Search() {
           )}
           {loading && (
             <p className='text-xl text-slate-700 text-center w-full'>
-              Đang lấy dữ liệu...
+              <img className='w-40 h-40' src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!sw800" alt="Đang lấy dữ liệu..." />
             </p>
           )}
 
