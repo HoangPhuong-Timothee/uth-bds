@@ -2,11 +2,7 @@ import { Link } from 'react-router-dom';
 import { MdLocationOn } from 'react-icons/md';
 import {
   FaBath,
-  FaBed,
-  FaChair,
-  FaMapMarkerAlt,
-  FaParking,
-  FaShare,
+  FaBed
 } from "react-icons/fa";
 
 export default function ListingItem({ listing }) {
